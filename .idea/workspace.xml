@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b11943f5-7ff5-494d-bf9c-c3d9bdfd6359" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4 (/bin/php)">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/marcj/topsort" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1X5V1lDuSvInQgSCM2KVsAL2qEr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit 6+" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="PHPUnit.SymfonyConsoleReporterTest.testReportResult">
+    <configuration name="ReportTimeZoneStepTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReportTimeZoneStepTest.testInvokeReportsTimezone" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" method="testInvokeReportsTimezone" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReportTimeZoneStepTest.testIsAlreadySetupReturnsFalse" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" method="testIsAlreadySetupReturnsFalse" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SetupRunnerTest.testInstantiate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\SetupRunnerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupRunnerTest.php" method="testInstantiate" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SymfonyConsoleReporterTest.testReportResult" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\Reporter\SymfonyConsoleReporterTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Reporter/SymfonyConsoleReporterTest.php" method="testReportResult" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.SymfonyConsoleReporterTest.testReportResult" />
+        <item itemvalue="PHPUnit.SetupRunnerTest.testInstantiate" />
+        <item itemvalue="PHPUnit.ReportTimeZoneStepTest" />
+        <item itemvalue="PHPUnit.ReportTimeZoneStepTest.testInvokeReportsTimezone" />
+        <item itemvalue="PHPUnit.ReportTimeZoneStepTest.testIsAlreadySetupReturnsFalse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b11943f5-7ff5-494d-bf9c-c3d9bdfd6359" name="Default Changelist" comment="" />
+      <created>1580335729138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580335729138</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2261" y="215" width="800" height="684" key="#Composer" timestamp="1580335738701">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2261" y="215" width="800" height="684" key="#Composer/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@1680.0.1920.1080" timestamp="1580335738701" />
+    <state x="625" y="146" width="700" height="830" key="#PHP" timestamp="1580759976856">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="625" y="146" width="700" height="830" key="#PHP/52.27.1868.1053@52.27.1868.1053" timestamp="1580759976856" />
+    <state x="612" y="149" width="737" height="816" key="#SetupStepCollectionTest.testInstantiate" timestamp="1580759978214">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="612" y="149" width="737" height="816" key="#SetupStepCollectionTest.testInstantiate/52.27.1868.1053@52.27.1868.1053" timestamp="1580759978214" />
+    <state x="298" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580338058924">
+      <screen x="0" y="27" width="1680" height="1023" />
+    </state>
+    <state x="298" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580338058924" />
+    <state x="152" y="127" width="1668" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1580769521226">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="152" y="127" width="1668" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580769521226" />
+    <state x="751" y="218" width="422" height="631" key="#com.intellij.ide.util.MemberChooser" timestamp="1580762234607">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="629" y="213" width="412" height="638" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580339204022" />
+    <state x="751" y="218" width="422" height="631" key="#com.intellij.ide.util.MemberChooser/52.27.1868.1053@52.27.1868.1053" timestamp="1580762234607" />
+    <state x="471" y="27" width="1019" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580761266175">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="377" y="13" width="916" height="1030" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580338927230" />
+    <state x="471" y="27" width="1019" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580761266175" />
+    <state x="714" y="429" width="534" height="255" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1580761260603">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="714" y="429" width="534" height="255" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/52.27.1868.1053@52.27.1868.1053" timestamp="1580761260603" />
+    <state width="1822" height="275" key="GridCell.Tab.0.bottom" timestamp="1580769943567">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="275" key="GridCell.Tab.0.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
+    <state width="1822" height="275" key="GridCell.Tab.0.center" timestamp="1580769943567">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="275" key="GridCell.Tab.0.center/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
+    <state width="1822" height="275" key="GridCell.Tab.0.left" timestamp="1580769943566">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="275" key="GridCell.Tab.0.left/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943566" />
+    <state width="1822" height="275" key="GridCell.Tab.0.right" timestamp="1580769943567">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="275" key="GridCell.Tab.0.right/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
+    <state width="1822" height="340" key="GridCell.Tab.1.bottom" timestamp="1580764680051">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="340" key="GridCell.Tab.1.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1580764680051" />
+    <state width="1822" height="340" key="GridCell.Tab.1.center" timestamp="1580764680046">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="340" key="GridCell.Tab.1.center/52.27.1868.1053@52.27.1868.1053" timestamp="1580764680046" />
+    <state width="1822" height="340" key="GridCell.Tab.1.left" timestamp="1580764680045">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="340" key="GridCell.Tab.1.left/52.27.1868.1053@52.27.1868.1053" timestamp="1580764680045" />
+    <state width="1822" height="340" key="GridCell.Tab.1.right" timestamp="1580764680048">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1822" height="340" key="GridCell.Tab.1.right/52.27.1868.1053@52.27.1868.1053" timestamp="1580764680048" />
+    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog" timestamp="1580762215473">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="651" y="375" width="553" height="387" key="NewPhpClassDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580339054795" />
+    <state x="2424" y="367" width="473" height="380" key="NewPhpClassDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@1680.0.1920.1080" timestamp="1580336005523" />
+    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580762215473" />
+    <state x="553" y="219" width="1077" height="775" key="SettingsEditor" timestamp="1580417194372">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="451" y="214" width="1077" height="775" key="SettingsEditor/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580338157461" />
+    <state x="2220" y="343" width="1022" height="737" key="SettingsEditor/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@1680.0.1920.1080" timestamp="1580335992796" />
+    <state x="553" y="219" key="SettingsEditor/52.27.1868.1053@52.27.1868.1053" timestamp="1580417194372" />
+    <state x="598" y="371" width="474" height="314" key="cloudConfig.SelfSettingsDialog" timestamp="1580336469538">
+      <screen x="0" y="27" width="1680" height="1023" />
+    </state>
+    <state x="598" y="371" width="474" height="314" key="cloudConfig.SelfSettingsDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580336469538" />
+    <state x="642" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1580415579201">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="642" y="381" key="com.intellij.ide.util.TipDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580415579201" />
+    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1580768964616">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580768964616" />
+    <state x="649" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1580769907893">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="649" y="259" width="672" height="678" key="search.everywhere.popup/52.27.1868.1053@52.27.1868.1053" timestamp="1580769907893" />
+  </component>
+</project>
