@@ -53,7 +53,7 @@ class SymfonyConsoleReporter implements Reporter
         $this->output->writeln(sprintf($msgTemplate, $result->getMessage()));
 
         foreach ($result->getNotes() as $note) {
-            $this->output->writeln('   • ' . $note);
+            $this->output->writeln('   • ' . trim($note));
         }
     }
 }

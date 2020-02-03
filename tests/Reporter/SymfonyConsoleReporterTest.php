@@ -33,6 +33,7 @@ class SymfonyConsoleReporterTest extends TestCase
             [SetupStepResult::fail('test', true), '✗ test'],
             [SetupStepResult::skip('test'), '⟳ test'],
             [SetupStepResult::notesOnly('test'), '• test'],
+            [SetupStepResult::succeed('test', true, ['test', 'test2']), "✓ test\n   • test\n   • test2"]
         ];
     }
 }

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b11943f5-7ff5-494d-bf9c-c3d9bdfd6359" name="Default Changelist" comment="" />
+    <list default="true" id="b11943f5-7ff5-494d-bf9c-c3d9bdfd6359" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Reporter/NullReporterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reporter/SymfonyConsoleReporter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reporter/SymfonyConsoleReporter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Reporter/SymfonyConsoleReporterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Reporter/SymfonyConsoleReporterTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4 (/bin/php)">
     <include_path>
@@ -55,6 +64,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1X5V1lDuSvInQgSCM2KVsAL2qEr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -62,6 +72,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit 6+" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -74,21 +85,21 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="PHPUnit.SymfonyConsoleReporterTest.testReportResult">
-    <configuration name="ReportTimeZoneStepTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.NullReporterTest.testReportResult">
+    <configuration name="NullReporterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\Reporter\NullReporterTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Reporter/NullReporterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ReportTimeZoneStepTest.testInvokeReportsTimezone" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" method="testInvokeReportsTimezone" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReportTimeZoneStepTest.testIsAlreadySetupReturnsFalse" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="SetterUpper\SetupStep\ReportTimeZoneStepTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupStep/ReportTimeZoneStepTest.php" method="testIsAlreadySetupReturnsFalse" scope="Method" />
+    <configuration name="NullReporterTest.testReportResult" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\Reporter\NullReporterTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Reporter/NullReporterTest.php" method="testReportResult" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="SetupRunnerTest.testInstantiate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="SetterUpper\SetupRunnerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/SetupRunnerTest.php" method="testInstantiate" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SymfonyConsoleReporterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SetterUpper\Reporter\SymfonyConsoleReporterTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Reporter/SymfonyConsoleReporterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="SymfonyConsoleReporterTest.testReportResult" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -101,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.NullReporterTest.testReportResult" />
+        <item itemvalue="PHPUnit.SymfonyConsoleReporterTest" />
+        <item itemvalue="PHPUnit.NullReporterTest" />
         <item itemvalue="PHPUnit.SymfonyConsoleReporterTest.testReportResult" />
         <item itemvalue="PHPUnit.SetupRunnerTest.testInstantiate" />
-        <item itemvalue="PHPUnit.ReportTimeZoneStepTest" />
-        <item itemvalue="PHPUnit.ReportTimeZoneStepTest.testInvokeReportsTimezone" />
-        <item itemvalue="PHPUnit.ReportTimeZoneStepTest.testIsAlreadySetupReturnsFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -156,26 +167,30 @@
     </state>
     <state x="377" y="13" width="916" height="1030" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580338927230" />
     <state x="471" y="27" width="1019" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580761266175" />
+    <state x="719" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580770300113">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="719" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580770300113" />
     <state x="714" y="429" width="534" height="255" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1580761260603">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state x="714" y="429" width="534" height="255" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/52.27.1868.1053@52.27.1868.1053" timestamp="1580761260603" />
-    <state width="1822" height="275" key="GridCell.Tab.0.bottom" timestamp="1580769943567">
+    <state width="1822" height="275" key="GridCell.Tab.0.bottom" timestamp="1580770389162">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="1822" height="275" key="GridCell.Tab.0.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
-    <state width="1822" height="275" key="GridCell.Tab.0.center" timestamp="1580769943567">
+    <state width="1822" height="275" key="GridCell.Tab.0.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1580770389162" />
+    <state width="1822" height="275" key="GridCell.Tab.0.center" timestamp="1580770389161">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="1822" height="275" key="GridCell.Tab.0.center/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
-    <state width="1822" height="275" key="GridCell.Tab.0.left" timestamp="1580769943566">
+    <state width="1822" height="275" key="GridCell.Tab.0.center/52.27.1868.1053@52.27.1868.1053" timestamp="1580770389161" />
+    <state width="1822" height="275" key="GridCell.Tab.0.left" timestamp="1580770389161">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="1822" height="275" key="GridCell.Tab.0.left/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943566" />
-    <state width="1822" height="275" key="GridCell.Tab.0.right" timestamp="1580769943567">
+    <state width="1822" height="275" key="GridCell.Tab.0.left/52.27.1868.1053@52.27.1868.1053" timestamp="1580770389161" />
+    <state width="1822" height="275" key="GridCell.Tab.0.right" timestamp="1580770389161">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="1822" height="275" key="GridCell.Tab.0.right/52.27.1868.1053@52.27.1868.1053" timestamp="1580769943567" />
+    <state width="1822" height="275" key="GridCell.Tab.0.right/52.27.1868.1053@52.27.1868.1053" timestamp="1580770389161" />
     <state width="1822" height="340" key="GridCell.Tab.1.bottom" timestamp="1580764680051">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
@@ -192,12 +207,12 @@
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state width="1822" height="340" key="GridCell.Tab.1.right/52.27.1868.1053@52.27.1868.1053" timestamp="1580764680048" />
-    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog" timestamp="1580762215473">
+    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog" timestamp="1580770289496">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state x="651" y="375" width="553" height="387" key="NewPhpClassDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@0.27.1680.1023" timestamp="1580339054795" />
     <state x="2424" y="367" width="473" height="380" key="NewPhpClassDialog/1680.0.1920.1080/3600.0.1920.1080/0.27.1680.1023@1680.0.1920.1080" timestamp="1580336005523" />
-    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580762215473" />
+    <state x="776" y="385" width="561" height="387" key="NewPhpClassDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580770289496" />
     <state x="553" y="219" width="1077" height="775" key="SettingsEditor" timestamp="1580417194372">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
@@ -212,10 +227,10 @@
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state x="642" y="381" key="com.intellij.ide.util.TipDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580415579201" />
-    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1580768964616">
+    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1580770193340">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580768964616" />
+    <state x="688" y="180" width="852" height="753" key="com.jetbrains.php.test.PhpNewTestDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1580770193340" />
     <state x="649" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1580769907893">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
