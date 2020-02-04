@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace SetterUpper;
 
+use Generator;
 use InvalidArgumentException;
 use SetterUpper\Reporter\NullReporter;
 
@@ -28,9 +29,9 @@ class SetupRunner
     }
 
     /**
-     * @param iterable|SetupStep[] $steps  Any iterable containing setup steps
-     * @param bool $stopOnError            If true, this method will stop on the first failure
-     * @return iterable|SetupStepResult[]  Generator which yields SetupStepResult instances
+     * @param iterable|SetupStep[] $steps   Any iterable containing setup steps
+     * @param bool $stopOnError             If true, this method will stop on the first failure
+     * @return Generator|SetupStepResult[]  Generator which yields SetupStepResult instances
      */
     public function run(iterable $steps, bool $stopOnError = false): iterable
     {
@@ -38,19 +39,30 @@ class SetupRunner
             if (! $step instanceof SetupStep) {
                 throw new InvalidArgumentException(sprintf(
                     'Each item in the iterator must be an instance of %s (you sent a/an %s)',
-                    is_object($step) ? ('instance of ' . get_class(SetupStep::class)) : gettype($step),
-                    get_class($step)
+                    SetupStep::class,
+                    is_object($step) ? get_class($step) : gettype($step)
                 ));
             }
 
             $result = $step->__invoke();
             $this->reporter->reportResult($result);
+            yield $result;
 
             if ($stopOnError && $result->getStatus() === SetupStepResult::STATUS_FAILED) {
-                return $result;
-            } else {
-                yield $result;
+                return;
             }
         }
+    }
+
+    /**
+     * Run all steps and return a report
+     *
+     * @param iterable|SetupStep[] $steps
+     * @param bool $stopOnError
+     * @return array|SetupStepResult[]
+     */
+    public function runAll(iterable $steps, bool $stopOnError = false): array
+    {
+        return iterator_to_array($this->run($steps, $stopOnError));
     }
 }

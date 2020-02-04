@@ -30,6 +30,12 @@ class SetupStepCollection implements IteratorAggregate, Countable
      */
     private $extraDependencies = [];
 
+    public static function build(SetupStep ...$steps)
+    {
+        $that = new static();
+        return call_user_func_array([$that, 'add'], $steps);
+    }
+
     /**
      * SetupRunner constructor.
      *
