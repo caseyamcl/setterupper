@@ -1,4 +1,4 @@
-# setterupper
+# Setter-Upper
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,23 +7,12 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This is a library to simplify setup workflow for your applications.  Features:
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-build/
-docs/
-config/
-src/
-tests/
-vendor/
-```
-
+* Every setup step is defined in its own class.
+* Supports dependencies between setup steps via `dependsOn()` *and* `mustRunBefore()`
+* Well-defined interfaces and simple reporting with the `SetupStepResult()` class
+* PSR-4 and PSR-12 compliant
 
 ## Install
 
@@ -35,9 +24,10 @@ $ composer require caseyamcl/setterupper
 
 ## Usage
 
+The tl;dr version:
+
 ``` php
-$skeleton = new SetterUpper();
-echo $skeleton->echoPhrase('Hello, League!');
+
 ```
 
 ## Change log
@@ -81,3 +71,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-downloads]: https://packagist.org/packages/caseyamcl/setterupper
 [link-author]: https://github.com/caseyamcl
 [link-contributors]: ../../contributors
+<!-- @IGNORE PREVIOUS: link -->
