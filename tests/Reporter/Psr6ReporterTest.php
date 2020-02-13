@@ -5,14 +5,32 @@ namespace SetterUpper\Reporter;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Log\Test\TestLogger;
+use SetterUpper\Fixtures\StepA;
 use SetterUpper\SetupStepResult;
 
 class Psr6ReporterTest extends TestCase
 {
+    public function testReportStep(): void
+    {
+        $buffer = new TestLogger();
+        $obj = new Psr6Reporter($buffer);
+        $obj->reportStep(new StepA());
+        $this->assertEquals(
+            [
+                'level' => 'info',
+                'message' => 'Running setup step: SetterUpper\Fixtures\StepA',
+                'context' => []
+            ],
+            current($buffer->records)
+        );
+    }
+
     /**
      * @dataProvider reportResultDataProvider
+     * @param SetupStepResult $result
+     * @param array $expected
      */
-    public function testReportResult(SetupStepResult $result, array $expected)
+    public function testReportResult(SetupStepResult $result, array $expected): void
     {
         $buffer = new TestLogger();
         $obj = new Psr6Reporter($buffer);

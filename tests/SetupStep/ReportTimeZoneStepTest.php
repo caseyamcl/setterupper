@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace SetterUpper\SetupStep;
 
 use PHPUnit\Framework\TestCase;
-use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 
 /**
  * Class ReportTimeZoneStepTest
@@ -13,23 +12,23 @@ use SebastianBergmann\CodeCoverage\Report\Xml\Report;
  */
 class ReportTimeZoneStepTest extends TestCase
 {
-    public function testDependsOnReturnsEmptyIterator()
+    public function testDependsOnReturnsEmptyIterator(): void
     {
         $this->assertEmpty(ReportTimeZoneStep::dependsOn());
     }
 
-    public function testMustRunBeforeReturnsEmptyIterator()
+    public function testMustRunBeforeReturnsEmptyIterator(): void
     {
         $this->assertEmpty(ReportTimeZoneStep::mustRunBefore());
     }
 
-    public function testIsAlreadySetupReturnsFalse()
+    public function testToString(): void
     {
         $step = new ReportTimeZoneStep();
-        $this->assertFalse($step->isAlreadySetup());
+        $this->assertStringContainsString('timezone', (string) $step);
     }
 
-    public function testInvokeReportsTimezone()
+    public function testInvokeReportsTimezone(): void
     {
         $expectedTimezone = date_default_timezone_get();
         $message = (new ReportTimeZoneStep())->__invoke()->getMessage();

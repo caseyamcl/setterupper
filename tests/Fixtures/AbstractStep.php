@@ -47,5 +47,8 @@ abstract class AbstractStep implements SetupStep
         return new SetupStepResult($this->status, get_called_class(), false, ['notes']);
     }
 
-
+    public function __toString(): string
+    {
+        return get_called_class();
+    }
 }

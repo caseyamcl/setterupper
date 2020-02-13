@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace SetterUpper\Reporter;
 
 use SetterUpper\Reporter;
+use SetterUpper\SetupStep;
 use SetterUpper\SetupStepResult;
 use Symfony\Component\Console\Output\OutputInterface;
-use Throwable;
 
 /**
  * Class SymfonyConsoleReporter
@@ -28,6 +28,13 @@ class SymfonyConsoleReporter implements Reporter
     public function __construct(OutputInterface $consoleOutput)
     {
         $this->output = $consoleOutput;
+    }
+
+    public function reportStep(SetupStep $step): void
+    {
+        if ($this->output->isVerbose()) {
+            $this->output->writeln('Running setup step: ' . (string) $step);
+        }
     }
 
     /**

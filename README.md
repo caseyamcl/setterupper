@@ -26,8 +26,93 @@ $ composer require caseyamcl/setterupper
 
 The tl;dr version:
 
+*StepA.php:*
+
 ``` php
-// TODO: Add example here
+use SetterUpper\SetupStep;
+use SetterUpper\SetupStepResult;
+
+class StepA implements SetupStep
+{
+    public static function dependsOn(): iterable
+    {
+        return [];
+    }
+
+    public static function mustRunBefore(): iterable
+    {
+        return [];
+    }
+    
+    public function __invoke(): SetupStepResult
+    {
+        $alreadySetup = false;
+        
+        if (! $alreadySetup) {
+            // Do stuff here...
+            return SetupStepResult::succeed('message here');                
+        } else {
+            return SetupStepResult::skip('already setup message');
+        }
+    }
+    
+    public function __toString() : string{
+        return 'describe what StepA does';
+    }
+}
+```
+
+*StepB.php:*
+
+```php
+use SetterUpper\SetupStep;
+use SetterUpper\SetupStepResult;
+
+class StepB implements SetupStep
+{
+    public static function dependsOn(): iterable
+    {
+        return [StepA::class];
+    }
+
+    public static function mustRunBefore(): iterable
+    {
+        return [StepC::class];
+    }
+    
+    public function __invoke(): SetupStepResult
+    {
+        $alreadySetup = false;
+        $wasRequired = true;
+                
+        if (! $alreadySetup) {
+            try {
+                return SetupStepResult::succeed('message here');    
+            } catch (\Throwable $e) {
+                return SetupStepResult::fail('fail message here', $wasRequired);
+            }
+                            
+        } else {
+            return SetupStepResult::skip('already setup message');
+        }
+    }
+    
+    public function __toString() : string{
+        return 'describe what StepB does';
+    }
+}
+```
+
+**File: SetupRunner.php**
+
+```php
+
+use SetterUpper\SetterUpper;
+
+$su = new SetterUpper();
+$su->add(new StepA(), new StepB(), new StepC());
+$report = $su->runAll();
+
 ```
 
 ## Change log

@@ -44,6 +44,7 @@ class SetupRunner
                 ));
             }
 
+            $this->reporter->reportStep($step);
             $result = $step->__invoke();
             $this->reporter->reportResult($result);
             yield $result;

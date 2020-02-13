@@ -2,10 +2,7 @@
     "name": "caseyamcl/setterupper",
     "type": "library",
     "description": "A framework-independent package to assist in console-based setup scripts",
-    "keywords": [
-        "caseyamcl",
-        "setterupper"
-    ],
+    "keywords": ["caseyamcl", "setterupper", "Setup", "Framework-agnostic"],
     "homepage": "https://github.com/caseyamcl/setterupper",
     "license": "MIT",
     "authors": [
@@ -21,8 +18,8 @@
         "marcj/topsort": "^1.1"
     },
     "require-dev": {
+        "psr/log": "^1.1",
         "phpunit/phpunit": "^9.0",
-        "monolog/monolog": "^2.0",
         "squizlabs/php_codesniffer": "^3.5",
         "symfony/console": "^3.4|^4.4|^5.0"
     },

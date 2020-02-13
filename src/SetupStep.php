@@ -25,13 +25,16 @@ interface SetupStep
     public static function mustRunBefore(): iterable;
 
     /**
+     * Run the step
      *
-     * @return bool
-     */
-    public function isAlreadySetup(): bool;
-
-    /**
      * @return SetupStepResult
      */
     public function __invoke(): SetupStepResult;
+
+    /**
+     * Return a brief description of what this step does
+     *
+     * @return string
+     */
+    public function __toString(): string;
 }

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace SetterUpper\Fixtures;
 
+use RuntimeException;
 use SetterUpper\SetupStepResult;
 
 /**
@@ -27,7 +28,6 @@ class StepThrowsException extends AbstractStep
      */
     public function __invoke(): SetupStepResult
     {
-        throw new \RuntimeException('error occurred during processing');
+        throw new RuntimeException('error occurred during processing');
     }
-
 }

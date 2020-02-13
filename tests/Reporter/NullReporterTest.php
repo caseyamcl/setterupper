@@ -4,16 +4,22 @@ declare(strict_types=1);
 namespace SetterUpper\Reporter;
 
 use PHPUnit\Framework\TestCase;
+use SetterUpper\Fixtures\StepA;
 use SetterUpper\SetupStepResult;
-use Symfony\Component\Console\Output\BufferedOutput;
 
 class NullReporterTest extends TestCase
 {
+    public function testReportStepDoesNothing(): void
+    {
+        $reporter = new NullReporter();
+        $this->assertEmpty($reporter->reportStep(new StepA()));
+    }
+
     /**
      * @dataProvider reportResultDataProvider
      * @param SetupStepResult $result
      */
-    public function testReportResult(SetupStepResult $result)
+    public function testReportResultDoesNothing(SetupStepResult $result): void
     {
         $reporter = new NullReporter();
         $this->assertEmpty($reporter->reportResult($result));

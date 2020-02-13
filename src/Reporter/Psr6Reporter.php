@@ -6,6 +6,7 @@ namespace SetterUpper\Reporter;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use SetterUpper\Reporter;
+use SetterUpper\SetupStep;
 use SetterUpper\SetupStepResult;
 
 /**
@@ -23,6 +24,14 @@ class Psr6Reporter implements Reporter
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
+    }
+
+    /**
+     * @param SetupStep $step
+     */
+    public function reportStep(SetupStep $step): void
+    {
+        $this->logger->info('Running setup step: ' . (string) $step);
     }
 
     /**
