@@ -23,14 +23,30 @@ class SetterUpper
     private $runner;
 
     /**
-     * SetterUpper constructor.
-     * @param Reporter|null $reporter
+     * Build using custom reporter and optionally a custom sorter
+     *
+     * @param Reporter $reporter
      * @param TopSortInterface|null $sorter
+     * @return $this
      */
-    public function __construct(?Reporter $reporter = null, ?TopSortInterface $sorter = null)
+    public static function buildUsingReporter(Reporter $reporter, ?TopSortInterface $sorter = null)
     {
-        $this->collection = new SetupStepCollection($sorter);
-        $this->runner = new SetupRunner($reporter);
+        return new static(
+            new SetupStepCollection($sorter),
+            new SetupRunner($reporter)
+        );
+    }
+
+    /**
+     * SetterUpper constructor.
+     *
+     * @param SetupStepCollection|null $collection
+     * @param SetupRunner|null $runner
+     */
+    public function __construct(?SetupStepCollection $collection = null, ?SetupRunner $runner = null)
+    {
+        $this->runner = $runner ?: new SetupRunner();
+        $this->collection = $collection ?: new SetupStepCollection();
     }
 
     /**
@@ -69,5 +85,21 @@ class SetterUpper
     public function runAll(bool $stopOnFailure = false): array
     {
         return $this->runner->runAll($this->collection, $stopOnFailure);
+    }
+
+    /**
+     * @return SetupStepCollection
+     */
+    public function getCollection(): SetupStepCollection
+    {
+        return $this->collection;
+    }
+
+    /**
+     * @return SetupRunner
+     */
+    public function getRunner(): SetupRunner
+    {
+        return $this->runner;
     }
 }
