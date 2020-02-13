@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace SetterUpper;
 
-use MJS\TopSort\TopSortInterface;
-
 /**
  * Class SetterUpper
  *
@@ -21,25 +19,6 @@ class SetterUpper
      * @var SetupRunner
      */
     private $runner;
-
-    /**
-     * Build using custom reporter and optionally a custom sorter
-     *
-     * @param Reporter $reporter
-     * @param SetupStepCollection|null $collection
-     * @param TopSortInterface|null $sorter
-     * @return $this
-     */
-    public static function buildUsingReporter(
-        Reporter $reporter,
-        ?SetupStepCollection $collection = null,
-        ?TopSortInterface $sorter = null
-    ) {
-        return new static(
-            $collection ?: new SetupStepCollection($sorter),
-            new SetupRunner($reporter)
-        );
-    }
 
     /**
      * SetterUpper constructor.

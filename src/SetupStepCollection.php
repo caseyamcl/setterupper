@@ -7,6 +7,7 @@ use Countable;
 use IteratorAggregate;
 use MJS\TopSort\Implementations\StringSort;
 use MJS\TopSort\TopSortInterface;
+use SetterUpper\Exception\SetupStepNameCollisionException;
 
 /**
  * Class SetupRunner
@@ -69,10 +70,16 @@ class SetupStepCollection implements IteratorAggregate, Countable
      */
     public function addStep(SetupStep $step): self
     {
-        $this->steps[get_class($step)] = $step;
+        $stepName = get_class($step);
 
-        foreach ($step::mustRunBefore() as $stepName) {
-            $this->extraDependencies[$stepName][] = get_class($step);
+        if (array_key_exists($stepName, $this->steps)) {
+            throw new SetupStepNameCollisionException($stepName);
+        }
+
+        $this->steps[$stepName] = $step;
+
+        foreach ($step::mustRunBefore() as $depName) {
+            $this->extraDependencies[$depName][] = $stepName;
         }
 
         return $this;

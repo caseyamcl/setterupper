@@ -19,12 +19,19 @@ abstract class AbstractStep implements SetupStep
     private $status;
 
     /**
+     * @var bool
+     */
+    private $required;
+
+    /**
      * AbstractStep constructor.
      * @param string $status
+     * @param bool $required
      */
-    public function __construct(string $status = SetupStepResult::STATUS_SUCCEEDED)
+    public function __construct(string $status = SetupStepResult::STATUS_SUCCEEDED, bool $required = false)
     {
         $this->status = $status;
+        $this->required = $required;
     }
 
     public static function dependsOn(): iterable
@@ -44,7 +51,7 @@ abstract class AbstractStep implements SetupStep
 
     public function __invoke(): SetupStepResult
     {
-        return new SetupStepResult($this->status, get_called_class(), false, ['notes']);
+        return new SetupStepResult($this->status, get_called_class(), $this->required, ['notes']);
     }
 
     public function __toString(): string

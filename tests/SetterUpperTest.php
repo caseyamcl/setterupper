@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 use SetterUpper\Fixtures\StepA;
 use SetterUpper\Fixtures\StepB;
 use SetterUpper\Fixtures\StepC;
-use SetterUpper\Reporter\NullReporter;
 
 /**
  * SetterUpper Test (technically an integration test)
@@ -19,13 +18,6 @@ class SetterUpperTest extends TestCase
     public function testInstantiateWithDefaultValues(): void
     {
         $sr = new SetterUpper();
-        $this->assertInstanceOf(SetterUpper::class, $sr);
-    }
-
-    public function testUsingCustomConstructor(): void
-    {
-        $reporter = new NullReporter();
-        $sr = SetterUpper::buildUsingReporter($reporter);
         $this->assertInstanceOf(SetterUpper::class, $sr);
     }
 

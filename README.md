@@ -26,7 +26,7 @@ $ composer require caseyamcl/setterupper
 
 The tl;dr version:
 
-*StepA.php:*
+**File: StepA.php**
 
 ``` php
 use SetterUpper\SetupStep;
@@ -62,7 +62,7 @@ class StepA implements SetupStep
 }
 ```
 
-*StepB.php:*
+**File: StepB.php**
 
 ```php
 use SetterUpper\SetupStep;
@@ -114,6 +114,16 @@ $su->add(new StepA(), new StepB(), new StepC());
 $report = $su->runAll();
 
 ```
+
+## In-depth
+
+### Naming
+
+* TODO: Mention that if you try to add the same class twice, a name collision exception will be thrown
+
+### Handing errors
+
+* TODO: Mention that this library does not handle exceptions thrown in SetupSteps
 
 ## Change log
 

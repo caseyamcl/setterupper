@@ -73,4 +73,13 @@ class SetupRunnerTest extends TestCase
         $obj = new SetupRunner();
         $obj->runAll([1, 2, 3]); // not instances of SetupStep
     }
+
+    public function testRunWithSkippedSteps(): void
+    {
+        $obj = new SetupRunner();
+        $coll = SetupStepCollection::build(new StepA(), new StepB(SetupStepResult::STATUS_SKIPPED), new StepC());
+        $report = $obj->runAll($coll);
+
+        $this->assertCount(3, $report);
+    }
 }

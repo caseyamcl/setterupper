@@ -6,6 +6,7 @@ namespace SetterUpper;
 use MJS\TopSort\CircularDependencyException;
 use MJS\TopSort\ElementNotFoundException;
 use PHPUnit\Framework\TestCase;
+use SetterUpper\Exception\SetupStepNameCollisionException;
 use SetterUpper\Fixtures\StepA;
 use SetterUpper\Fixtures\StepB;
 use SetterUpper\Fixtures\StepC;
@@ -72,5 +73,11 @@ class SetupStepCollectionTest extends TestCase
         $coll = new SetupStepCollection();
         $coll->add(new StepG());
         iterator_to_array($coll->getIterator());
+    }
+
+    public function testAddingTwoOfTheSameClassThrowsException()
+    {
+        $this->expectException(SetupStepNameCollisionException::class);
+        SetupStepCollection::build(new StepA(), new StepA());
     }
 }
