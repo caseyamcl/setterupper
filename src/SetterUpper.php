@@ -26,13 +26,17 @@ class SetterUpper
      * Build using custom reporter and optionally a custom sorter
      *
      * @param Reporter $reporter
+     * @param SetupStepCollection|null $collection
      * @param TopSortInterface|null $sorter
      * @return $this
      */
-    public static function buildUsingReporter(Reporter $reporter, ?TopSortInterface $sorter = null)
-    {
+    public static function buildUsingReporter(
+        Reporter $reporter,
+        ?SetupStepCollection $collection = null,
+        ?TopSortInterface $sorter = null
+    ) {
         return new static(
-            new SetupStepCollection($sorter),
+            $collection ?: new SetupStepCollection($sorter),
             new SetupRunner($reporter)
         );
     }
@@ -88,9 +92,9 @@ class SetterUpper
     }
 
     /**
-     * @return SetupStepCollection
+     * @return SetupStepCollection|iterable|SetupStep[]
      */
-    public function getCollection(): SetupStepCollection
+    public function getSteps(): SetupStepCollection
     {
         return $this->collection;
     }

@@ -54,4 +54,16 @@ class SetterUpperTest extends TestCase
         $results = $sr->runAll();
         $this->assertCount(3, $results);
     }
+
+    public function testGetSteps(): void
+    {
+        $sr = new SetterUpper();
+        $this->assertInstanceOf(SetupStepCollection::class, $sr->getSteps());
+    }
+
+    public function testGetRunner(): void
+    {
+        $sr = new SetterUpper();
+        $this->assertInstanceOf(SetupRunner::class, $sr->getRunner());
+    }
 }
