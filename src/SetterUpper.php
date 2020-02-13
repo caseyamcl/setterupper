@@ -66,7 +66,7 @@ class SetterUpper
      * @param bool $stopOnFailure
      * @return array
      */
-    public function runAll(bool $stopOnFailure): array
+    public function runAll(bool $stopOnFailure = false): array
     {
         return $this->runner->runAll($this->collection, $stopOnFailure);
     }
