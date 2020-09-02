@@ -4,6 +4,11 @@ All notable changes to `setterupper` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.2 - 2020-09-01
+
+### Added
+- New class: `TwoWaySorter`
+
 ## v0.1 - 2020-02-13
 
 ### Added
