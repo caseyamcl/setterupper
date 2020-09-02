@@ -74,6 +74,11 @@ class TwoWaySorter implements IteratorAggregate, Countable
         return $sorter->sort();
     }
 
+    /**
+     * @return array
+     * @throws CircularDependencyException
+     * @throws ElementNotFoundException
+     */
     public function sort(): array
     {
         return $this->getIterator();
