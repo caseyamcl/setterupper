@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace SetterUpper;
 
+use ArrayIterator;
 use Countable;
 use IteratorAggregate;
 use MJS\TopSort\Implementations\StringSort;
@@ -88,8 +89,12 @@ class SetupStepCollection implements IteratorAggregate, Countable
     /**
      * @inheritDoc
      */
-    public function getIterator()
+    public function getIterator(): iterable
     {
+        if (count($this->steps) === 0) {
+            return new ArrayIterator([]);
+        }
+
         $sorter = clone $this->sorter;
 
         foreach ($this->steps as $stepClassName => $step) {

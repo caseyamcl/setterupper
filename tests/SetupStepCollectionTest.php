@@ -28,6 +28,12 @@ class SetupStepCollectionTest extends TestCase
         $this->assertSame(0, count($coll));
     }
 
+    public function testGetIteratorWhenNoItems()
+    {
+        $coll = new SetupStepCollection();
+        $this->assertEmpty(iterator_to_array($coll));
+    }
+
     public function testGetIteratorReturnsIteratorEvenWhenNoItems()
     {
         $coll = new SetupStepCollection();
