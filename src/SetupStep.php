@@ -3,27 +3,15 @@ declare(strict_types=1);
 
 namespace SetterUpper;
 
+use SortableTasks\SortableTask;
+
 /**
  * Interface SetupStep
  *
  * @author Casey McLaughlin <caseyamcl@gmail.com>
  */
-interface SetupStep
+interface SetupStep extends SortableTask
 {
-    /**
-     * Get the classes that must run before this step
-     *
-     * @return iterable|string[]
-     */
-    public static function dependsOn(): iterable;
-
-    /**
-     * Get the classes that must run after this step
-     *
-     * @return iterable|string[]
-     */
-    public static function mustRunBefore(): iterable;
-
     /**
      * Run the step
      *
