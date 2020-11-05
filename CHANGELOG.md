@@ -4,6 +4,10 @@ All notable changes to `setterupper` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v0.3 - 2020-11-05
+### Changed
+- Refactored to use `SortableTasks` library
+
 ## v0.2.1 - 2020-10-24
 ### Fixed
 - Fixed error when the SetupStepCollection is empty
