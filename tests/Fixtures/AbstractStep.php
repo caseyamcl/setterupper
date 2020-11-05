@@ -13,15 +13,8 @@ use SetterUpper\SetupStepResult;
  */
 abstract class AbstractStep implements SetupStep
 {
-    /**
-     * @var string
-     */
-    private $status;
-
-    /**
-     * @var bool
-     */
-    private $required;
+    private string $status;
+    private bool $required;
 
     /**
      * AbstractStep constructor.
@@ -42,11 +35,6 @@ abstract class AbstractStep implements SetupStep
     public static function mustRunBefore(): iterable
     {
         return [];
-    }
-
-    public function isAlreadySetup(): bool
-    {
-        return false;
     }
 
     public function __invoke(): SetupStepResult

@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace SetterUpper;
 
+use Countable;
+use IteratorAggregate;
+use MJS\TopSort\TopSortInterface;
 use SetterUpper\Exception\SetupStepNameCollisionException;
 use SortableTasks\SortableTasksIterator;
 
@@ -11,38 +14,52 @@ use SortableTasks\SortableTasksIterator;
  *
  * @author Casey McLaughlin <caseyamcl@gmail.com>
  */
-class SetupStepCollection extends SortableTasksIterator
+class SetupStepCollection implements IteratorAggregate, Countable
 {
-    /**
-     * Add multiple steps to the collection
-     *
-     * @param SetupStep ...$steps
-     * @return $this
-     */
-    public function addSteps(SetupStep ...$steps): self
-    {
-        foreach ($steps as $step) {
-            $this->addStep($step);
-        }
+    private SortableTasksIterator $innerCollection;
 
-        return $this;
+    public static function build(SetupStep ...$steps): self
+    {
+        $that = new static();
+        call_user_func_array([$that, 'add'], $steps);
+        return $that;
+    }
+
+    public function __construct(TopSortInterface $sorter = null)
+    {
+        $this->innerCollection = new SortableTasksIterator($sorter);
     }
 
     /**
      * Add a step to the collection
      *
-     * @param SetupStep $step
+     * @param SetupStep[] $steps
      * @return $this
      */
-    public function addStep(SetupStep $step): self
+    public function add(SetupStep ...$steps): self
     {
-        $stepName = get_class($step);
-
-        if (array_key_exists($stepName, $this->tasks)) {
-            throw new SetupStepNameCollisionException($stepName);
+        foreach ($steps as $step) {
+            if ($this->innerCollection->contains(get_class($step))) {
+                throw new SetupStepNameCollisionException(get_class($step), 409);
+            }
+            $this->innerCollection->add($step);
         }
 
-        $this->add($step);
         return $this;
+    }
+
+    public function addStep(SetupStep $step): self
+    {
+        return $this->add($step);
+    }
+
+    public function getIterator(): iterable
+    {
+        yield from $this->innerCollection;
+    }
+
+    public function count(): int
+    {
+        return $this->innerCollection->count();
     }
 }
